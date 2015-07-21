@@ -1,46 +1,46 @@
-#Code Book#
+##Code Book##
+This code book describes the variables contained in the tidy dataset created by the run_analysis script. The variables are based off those in the UCI HAR dataset. Briefly, these data summarize various signals collected from smartphone accelerometers. Further information is avaialble here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones   
+###Variables
 
-##Variables##
-
-###subject (factor) ###
-    levels 1-30, identifying 30 unique subjects age 19-48 years
+####subject (factor)  
+>    levels 1-30, identifying 30 unique subjects age 19-48 years
     
 
-###activity (factor)###
+####activity (factor)  
 Identifies the activity the subject was performing while the signal was being recorded by the smartphone     
-    levels 
-          1 WALKING  
-          2 WALKING_UPSTAIRS  
-          3 WALKING_DOWNSTAIRS  
-          4 SITTING  
-          5 STANDING  
-          6 LAYING  
+>    levels   
+>>      1 WALKING  
+>>      2 WALKING_UPSTAIRS  
+>>      3 WALKING_DOWNSTAIRS  
+>>      4 SITTING  
+>>      5 STANDING  
+>>      6 LAYING  
          
-###features (numeric variables in columns 3-66 of the dataset)###   
+####features (numeric variables in columns 3-66 of the dataset)   
 In this tidy dataset, the measurement for each variable is the _mean_ value for that subject + activity. Each feature denotes the mean or the standard deviation of a signal (e.g. tBodyAcc, fBodyGyro). Several of the signals are also identified along a particular axis (X, Y, Z).      
-          tBodyAcc-mean()-X  
-          tBodyAcc-mean()-Y  
-          tBodyAcc-mean()-Z    
-          tBodyAcc-std()-X  
-          tBodyAcc-std()-Y  
-          tBodyAcc-std()-Z  
-          tGravityAcc-mean()-X  
-          tGravityAcc-mean()-Y  
-          tGravityAcc-mean()-Z  
-          tGravityAcc-std()-X  
-          tGravityAcc-std()-Y  
-    tGravityAcc-std()-Z  
-    tBodyAccJerk-mean()-X  
-    tBodyAccJerk-mean()-Y  
-    tBodyAccJerk-mean()-Z  
-    tBodyAccJerk-std()-X  
-    tBodyAccJerk-std()-Y  
-    tBodyAccJerk-std()-Z  
-    tBodyGyro-mean()-X  
-    tBodyGyro-mean()-Y  
-    tBodyGyro-mean()-Z  
-    tBodyGyro-std()-X  
-    tBodyGyro-std()-Y  
+>>      tBodyAcc-mean()-X  
+>>      tBodyAcc-mean()-Y  
+>>      tBodyAcc-mean()-Z    
+>>      tBodyAcc-std()-X  
+>>      tBodyAcc-std()-Y  
+        tBodyAcc-std()-Z  
+        tGravityAcc-mean()-X  
+        tGravityAcc-mean()-Y  
+        tGravityAcc-mean()-Z  
+        tGravityAcc-std()-X  
+        tGravityAcc-std()-Y  
+        tGravityAcc-std()-Z  
+        tBodyAccJerk-mean()-X  
+        tBodyAccJerk-mean()-Y  
+        tBodyAccJerk-mean()-Z  
+        tBodyAccJerk-std()-X  
+        tBodyAccJerk-std()-Y  
+        tBodyAccJerk-std()-Z  
+        tBodyGyro-mean()-X  
+        tBodyGyro-mean()-Y  
+        tBodyGyro-mean()-Z  
+        tBodyGyro-std()-X  
+        tBodyGyro-std()-Y  
     tBodyGyro-std()-Z  
     tBodyGyroJerk-mean()-X  
     tBodyGyroJerk-mean()-Y  
