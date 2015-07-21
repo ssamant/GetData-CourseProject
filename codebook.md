@@ -7,7 +7,7 @@
     
 
 ###activity (factor)###
-    
+Identifies the activity the subject was performing while the signal was being recorded by the smartphone     
     levels 
           1 WALKING  
           2 WALKING_UPSTAIRS  
@@ -17,8 +17,8 @@
           6 LAYING  
          
 ###features (numeric variables in columns 3-66 of the dataset)###   
-In this dataset, the measurement given is the mean value for that subject + activity. Each feature denotes the mean or the standard deviation of a signal (e.g. tBodyAcc, fBodyGyro). Several of the signals are also identified along a particular axis (X, Y, Z).      
-            tBodyAcc-mean()-X  
+In this tidy dataset, the measurement for each variable is the _mean_ value for that subject + activity. Each feature denotes the mean or the standard deviation of a signal (e.g. tBodyAcc, fBodyGyro). Several of the signals are also identified along a particular axis (X, Y, Z).      
+          tBodyAcc-mean()-X  
           tBodyAcc-mean()-Y  
           tBodyAcc-mean()-Z    
           tBodyAcc-std()-X  
