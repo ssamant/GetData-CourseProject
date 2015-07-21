@@ -31,7 +31,7 @@ train <- cbind(subject_train, y_train, x_train)
 
 ## read test data, subjects and activity data, join into one test dataset
 x_test <- read.table("./UCI HAR Dataset/test/X_test.txt") 
-colnames(x_test) <- feature.names
+colnames(x_test) <- featurelabels
 y_test <- read.table("./UCI HAR Dataset/test/y_test.txt", colClasses = "factor", col.names = "activity")
 levels(y_test$activity) <- activity[,2]
 subject_test <- read.table("./UCI HAR Dataset/test/subject_test.txt", colClasses = "factor", col.names = "subject")  
@@ -50,6 +50,7 @@ melted <- melt(dataMS, id = c("subject", "activity")))
 ##cast data into wide format
 tidy <- dcast(melted, subject + activity ~ variable, mean)
 
+##save file to working directory
 write.table(tidy, file="tidy.txt", row.names=FALSE, quote=FALSE)
 
 
