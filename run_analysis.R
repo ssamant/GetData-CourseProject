@@ -3,11 +3,13 @@
 ##	2.	Extracts only the measurements on the mean and standard deviation for each measurement. 
 ##	3.	Uses descriptive activity names to name the activities in the data set
 ##	4.	Appropriately labels the data set with descriptive variable names. 
-##	5.	From the data set in step 4, creates a second, independent tidy data set with the average of each variable for 	each activity and each subject. 
+##	5.	From the data set in step 4, creates a second, independent tidy data set with the average of each variable for 	each activity and each subject.
+
 
 library(reshape2)
 
 ##download , unzip data
+fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileURL, destfile = "./UCI_HAR.zip", method = "curl")
 unzip("./UCI_HAR.zip")
 
@@ -42,7 +44,7 @@ dataMS <- data[,c("subject", "activity", colnames(data)[grep("(mean|std)\\(", co
 
 ## create second, independent tidy data set with the average of each variable for each activity and each subject.
 ##melt into narrow dataset
-melted <- melt(dataMS, id = c("subject", "activity")))
+melted <- melt(dataMS, id = c("subject", "activity"))
 
 ##cast data into wide format
 tidy <- dcast(melted, subject + activity ~ variable, mean)
