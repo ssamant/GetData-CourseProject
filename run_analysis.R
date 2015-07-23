@@ -39,7 +39,7 @@ test <- cbind(subject_test, y_test, x_test)
 ##join training and test datasets
 data <- rbind(train, test)
 
-## subset data to include only means and std of features
+## subset data to include only means and std of features (found this on Stack Overflow)
 dataMS <- data[,c("subject", "activity", colnames(data)[grep("(mean|std)\\(", colnames(data))])]
 
 ## create second, independent tidy data set with the average of each variable for each activity and each subject.
