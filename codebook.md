@@ -16,8 +16,8 @@ Identifies the activity the subject was performing while the signal was being re
 5.  STANDING  
 6.  LAYING  
          
-####features (numeric variables in columns 3-66 of the dataset)   
-In this tidy dataset, the measurement for each variable is the _mean_ value for that subject + activity. Each feature denotes the mean or the standard deviation of a signal (e.g. tBodyAcc, fBodyGyro). Several of the signals are also identified along a particular axis (X, Y, Z).      
+####features (numeric variables in columns 3-66 of the tidy dataset)   
+In this tidy dataset, the measurement for each variable is the _mean_ value of the feature measurements for that subject + activity. The feature variables are the mean or the standard deviation of the measured feature signals (e.g. tBodyAcc, fBodyGyro). Several of the signals are also identified along a particular axis (X, Y, Z).      
   
 tBodyAcc-mean()-X  
 tBodyAcc-mean()-Y  
